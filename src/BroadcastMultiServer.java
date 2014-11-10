@@ -4,26 +4,27 @@ import java.io.*;
 
 public class BroadcastMultiServer {
 	private ArrayList<Player> playerList; 
+	private boolean socketConnection;
 	
 	public static void main(String[] args) throws IOException {
 
-//		if (args.length != 1) {
-//			System.err.println("Usage: java KKMultiServer <port number>");
-//			System.exit(1);
-//		}
-		
-		int portNumber = ProtocolConstants.APP_LISTENING_PORT_NUMBER;
-		boolean listening = true;
-		
-		try (ServerSocket serverSocket = new ServerSocket(portNumber)) {
-			if(listening == true) {
-				new BroadcastMultiServerThread(serverSocket.accept()).start();
-			}
-			serverSocket.close();
-		} catch (IOException e) {
-			System.err.println("Could not listen on port " + portNumber);
-			System.exit(-1);
-		}
+		int nreq = 1;
+        try
+        {
+            ServerSocket sock = new ServerSocket (8080);
+            for (;;)
+            {
+                Socket newsock = sock.accept();
+                System.out.println("Creating thread ...");
+                Thread t = new BroadcastMultiServerThread(newsock);
+                t.start();
+            }
+        }
+        catch (Exception e)
+        {
+            System.out.println("IO error " + e);
+        }
+        System.out.println("End!");
 	}
 	
 	public void addPlayer(Player player) {
