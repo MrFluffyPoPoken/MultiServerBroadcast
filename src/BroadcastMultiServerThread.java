@@ -53,7 +53,7 @@ public class BroadcastMultiServerThread extends Thread {
 				e.printStackTrace();
 			}
 		}
-
+		
 		//Working on registration right now
 		while (listenForRegistrationInfo) {
 			try (PrintWriter out = new PrintWriter(socket.getOutputStream(),
@@ -74,7 +74,7 @@ public class BroadcastMultiServerThread extends Thread {
 				e.printStackTrace();
 			}
 		}
-
+		
 		// sendRegistrationConfirmation();
 
 		// try {
