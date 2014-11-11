@@ -1,6 +1,9 @@
 import java.net.*;
 import java.io.*;
 
+import protocol.RegistrationMessageFromPhoneClass;
+import protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone;
+
 public class BroadcastMultiServerThread extends Thread {
 	private Socket socket = null;
 	private boolean registrationActive; 
@@ -14,7 +17,7 @@ public class BroadcastMultiServerThread extends Thread {
 		listenForPacket = true; 
 		player = new Player(); 
 	}
-
+	
 	public void run() {
 		String playerIP = "";
 		String playerInfo = ""; 
@@ -69,7 +72,20 @@ public class BroadcastMultiServerThread extends Thread {
 //		}
 //		socket.close();
 	}
-
+	
+	/**
+	 * Parse input stream to get message.
+	 * 
+	 * Usage: message.getTeamName() or message.getColorHex();
+	 * @param in
+	 * @return message contains team name and color.
+	 * @throws IOException
+	 */
+	private RegistrationMessageFromPhone receiveTeamInfo(InputStream in) throws IOException {
+		RegistrationMessageFromPhone message = RegistrationMessageFromPhone.parseFrom(in);
+		return message;
+	}
+	
 	public void sendRegistrationConfirmation() {
 		try {
 			String message = "register"; 
