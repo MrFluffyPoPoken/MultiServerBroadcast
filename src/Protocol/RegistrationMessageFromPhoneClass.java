@@ -161,14 +161,14 @@ public final class RegistrationMessageFromPhoneClass {
     }
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return protocol.RegistrationMessageFromPhoneClass.internal_static_messageFromPhone_RegistrationMessageFromPhone_descriptor;
+      return Protocol.RegistrationMessageFromPhoneClass.internal_static_messageFromPhone_RegistrationMessageFromPhone_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return protocol.RegistrationMessageFromPhoneClass.internal_static_messageFromPhone_RegistrationMessageFromPhone_fieldAccessorTable
+      return Protocol.RegistrationMessageFromPhoneClass.internal_static_messageFromPhone_RegistrationMessageFromPhone_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
-              protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone.class, protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone.Builder.class);
+              Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone.class, Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone.Builder.class);
     }
 
     public static com.google.protobuf.Parser<RegistrationMessageFromPhone> PARSER =
@@ -423,53 +423,53 @@ public final class RegistrationMessageFromPhoneClass {
       return super.writeReplace();
     }
 
-    public static protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parseFrom(
+    public static Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parseFrom(
         com.google.protobuf.ByteString data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parseFrom(
+    public static Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parseFrom(
         com.google.protobuf.ByteString data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parseFrom(byte[] data)
+    public static Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parseFrom(byte[] data)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data);
     }
-    public static protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parseFrom(
+    public static Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parseFrom(
         byte[] data,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws com.google.protobuf.InvalidProtocolBufferException {
       return PARSER.parseFrom(data, extensionRegistry);
     }
-    public static protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parseFrom(java.io.InputStream input)
+    public static Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parseFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parseFrom(
+    public static Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parseFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseFrom(input, extensionRegistry);
     }
-    public static protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parseDelimitedFrom(java.io.InputStream input)
+    public static Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parseDelimitedFrom(java.io.InputStream input)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input);
     }
-    public static protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parseDelimitedFrom(
+    public static Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parseDelimitedFrom(
         java.io.InputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
       return PARSER.parseDelimitedFrom(input, extensionRegistry);
     }
-    public static protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parseFrom(
+    public static Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parseFrom(
         com.google.protobuf.CodedInputStream input)
         throws java.io.IOException {
       return PARSER.parseFrom(input);
     }
-    public static protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parseFrom(
+    public static Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parseFrom(
         com.google.protobuf.CodedInputStream input,
         com.google.protobuf.ExtensionRegistryLite extensionRegistry)
         throws java.io.IOException {
@@ -478,7 +478,7 @@ public final class RegistrationMessageFromPhoneClass {
 
     public static Builder newBuilder() { return Builder.create(); }
     public Builder newBuilderForType() { return newBuilder(); }
-    public static Builder newBuilder(protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone prototype) {
+    public static Builder newBuilder(Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone prototype) {
       return newBuilder().mergeFrom(prototype);
     }
     public Builder toBuilder() { return newBuilder(this); }
@@ -500,17 +500,17 @@ public final class RegistrationMessageFromPhoneClass {
     public static final class Builder extends
         com.google.protobuf.GeneratedMessage.Builder<Builder> implements
         // @@protoc_insertion_point(builder_implements:messageFromPhone.RegistrationMessageFromPhone)
-        protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhoneOrBuilder {
+        Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhoneOrBuilder {
       public static final com.google.protobuf.Descriptors.Descriptor
           getDescriptor() {
-        return protocol.RegistrationMessageFromPhoneClass.internal_static_messageFromPhone_RegistrationMessageFromPhone_descriptor;
+        return Protocol.RegistrationMessageFromPhoneClass.internal_static_messageFromPhone_RegistrationMessageFromPhone_descriptor;
       }
 
       protected com.google.protobuf.GeneratedMessage.FieldAccessorTable
           internalGetFieldAccessorTable() {
-        return protocol.RegistrationMessageFromPhoneClass.internal_static_messageFromPhone_RegistrationMessageFromPhone_fieldAccessorTable
+        return Protocol.RegistrationMessageFromPhoneClass.internal_static_messageFromPhone_RegistrationMessageFromPhone_fieldAccessorTable
             .ensureFieldAccessorsInitialized(
-                protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone.class, protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone.Builder.class);
+                Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone.class, Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone.Builder.class);
       }
 
       // Construct using proto.fromPhone.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone.newBuilder()
@@ -550,23 +550,23 @@ public final class RegistrationMessageFromPhoneClass {
 
       public com.google.protobuf.Descriptors.Descriptor
           getDescriptorForType() {
-        return protocol.RegistrationMessageFromPhoneClass.internal_static_messageFromPhone_RegistrationMessageFromPhone_descriptor;
+        return Protocol.RegistrationMessageFromPhoneClass.internal_static_messageFromPhone_RegistrationMessageFromPhone_descriptor;
       }
 
-      public protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone getDefaultInstanceForType() {
-        return protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone.getDefaultInstance();
+      public Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone getDefaultInstanceForType() {
+        return Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone.getDefaultInstance();
       }
 
-      public protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone build() {
-        protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone result = buildPartial();
+      public Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone build() {
+        Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone result = buildPartial();
         if (!result.isInitialized()) {
           throw newUninitializedMessageException(result);
         }
         return result;
       }
 
-      public protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone buildPartial() {
-        protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone result = new protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone(this);
+      public Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone buildPartial() {
+        Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone result = new Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone(this);
         int from_bitField0_ = bitField0_;
         int to_bitField0_ = 0;
         if (((from_bitField0_ & 0x00000001) == 0x00000001)) {
@@ -591,16 +591,16 @@ public final class RegistrationMessageFromPhoneClass {
       }
 
       public Builder mergeFrom(com.google.protobuf.Message other) {
-        if (other instanceof protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone) {
-          return mergeFrom((protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone)other);
+        if (other instanceof Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone) {
+          return mergeFrom((Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone)other);
         } else {
           super.mergeFrom(other);
           return this;
         }
       }
 
-      public Builder mergeFrom(protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone other) {
-        if (other == protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone.getDefaultInstance()) return this;
+      public Builder mergeFrom(Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone other) {
+        if (other == Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone.getDefaultInstance()) return this;
         if (other.hasTeamName()) {
           bitField0_ |= 0x00000001;
           teamName_ = other.teamName_;
@@ -633,11 +633,11 @@ public final class RegistrationMessageFromPhoneClass {
           com.google.protobuf.CodedInputStream input,
           com.google.protobuf.ExtensionRegistryLite extensionRegistry)
           throws java.io.IOException {
-        protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parsedMessage = null;
+        Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone parsedMessage = null;
         try {
           parsedMessage = PARSER.parsePartialFrom(input, extensionRegistry);
         } catch (com.google.protobuf.InvalidProtocolBufferException e) {
-          parsedMessage = (protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone) e.getUnfinishedMessage();
+          parsedMessage = (Protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone) e.getUnfinishedMessage();
           throw e;
         } finally {
           if (parsedMessage != null) {
