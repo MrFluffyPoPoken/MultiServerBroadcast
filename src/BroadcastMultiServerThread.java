@@ -2,7 +2,12 @@ import java.net.*;
 import java.nio.charset.StandardCharsets;
 import java.io.*;
 
+<<<<<<< HEAD
 import Protocol.RegistrationMessageFromPhoneClass.*;
+=======
+import protocol.RegistrationMessageFromPhoneClass;
+import protocol.RegistrationMessageFromPhoneClass.RegistrationMessageFromPhone;
+>>>>>>> f34870f24e6a16aba8880b0ca3805a44f98b714f
 
 public class BroadcastMultiServerThread extends Thread {
 	private Socket socket = null;
@@ -15,7 +20,7 @@ public class BroadcastMultiServerThread extends Thread {
 		registrationActive = listenForClients = playGame = gameActive = false;
 		player = new Player();
 	}
-
+	
 	public void run() {
 		String playerIP = "";
 
@@ -88,12 +93,19 @@ public class BroadcastMultiServerThread extends Thread {
 		}
 
 	}
+<<<<<<< HEAD
 
+=======
+	
+>>>>>>> f34870f24e6a16aba8880b0ca3805a44f98b714f
 	/**
 	 * Parse input stream to get message.
 	 * 
 	 * Usage: message.getTeamName() or message.getColorHex();
+<<<<<<< HEAD
 	 * 
+=======
+>>>>>>> f34870f24e6a16aba8880b0ca3805a44f98b714f
 	 * @param in
 	 * @return message contains team name and color.
 	 * @throws IOException
@@ -102,6 +114,20 @@ public class BroadcastMultiServerThread extends Thread {
 		RegistrationMessageFromPhone message = RegistrationMessageFromPhone.parseFrom(in);
 		return message;
 	}
+<<<<<<< HEAD
+=======
+	
+	public void sendRegistrationConfirmation() {
+		try {
+			String message = "register"; 
+			DatagramSocket myServerSocket = new DatagramSocket(ProtocolConstants.APP_LISTENING_PORT_NUMBER); // server socket
+			byte[] sendData = new byte[message.length()]; // build msg
+			sendData = message.getBytes();
+			InetSocketAddress destSocketAddr = new InetSocketAddress(player.getIPAddress(), ProtocolConstants.APP_LISTENING_PORT_NUMBER); // destination socket addr
+			DatagramPacket sendPacket = new DatagramPacket(sendData, sendData.length, destSocketAddr); // make packet
+			myServerSocket.send(sendPacket); // send packet
+			//myServerSocket.close();
+>>>>>>> f34870f24e6a16aba8880b0ca3805a44f98b714f
 
 	public void endListeningForClientsAndStartRegistration() {
 		registrationActive = true;
