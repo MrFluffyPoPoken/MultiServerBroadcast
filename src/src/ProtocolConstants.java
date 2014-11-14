@@ -1,3 +1,4 @@
+package src;
 public class ProtocolConstants {
 	public static int APP_LISTENING_PORT_NUMBER = 60000;
 	public static final String REGISTER_START = "register";
