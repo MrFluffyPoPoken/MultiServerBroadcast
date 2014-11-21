@@ -6,7 +6,7 @@ import javax.swing.*;
 
 public class ServRun extends Frame implements WindowListener, ActionListener {
 	JTextArea text = new JTextArea(5, 40);
-	Button beginReg, endReg;
+	Button beginReg, recieveInfoMessage, endReg;
 
 	public static void main(String[] args) {
 		ServRun myWindow = new ServRun("Quiz Show");
@@ -35,6 +35,15 @@ public class ServRun extends Frame implements WindowListener, ActionListener {
 			}
 		});
 
+//		recieveInfoMessage = new Button("Enable Team Creation");
+//		add(recieveInfoMessage); 
+//		recieveInfoMessage.addActionListener(new ActionListener() {
+//			@Override
+//			public void actionPerformed(ActionEvent arg0) {
+//				
+//			}
+//		}
+
 		endReg = new Button("End Registration Period");
 		add(endReg);
 		endReg.addActionListener(new ActionListener() {
@@ -49,21 +58,21 @@ public class ServRun extends Frame implements WindowListener, ActionListener {
 		});
 	}
 
-//	public void actionPerformed(ActionEvent e) {
-//		text.setText("Searching for Devices...");
-//		RegistrationListenerMultiThreadedServer server = new RegistrationListenerMultiThreadedServer(
-//				ProtocolConstants.APP_LISTENING_PORT_NUMBER);
-//		server.BeginReg();
-//		new Thread(server).start();
-//		text.setText("I love cock!");
-//		try {
-//			Thread.sleep(20 * 1000);
-//		} catch (InterruptedException i) {
-//			i.printStackTrace();
-//		}
-//		text.setText("Stopping Server");
-//		server.stop();
-//	}
+	//	public void actionPerformed(ActionEvent e) {
+	//		text.setText("Searching for Devices...");
+	//		RegistrationListenerMultiThreadedServer server = new RegistrationListenerMultiThreadedServer(
+	//				ProtocolConstants.APP_LISTENING_PORT_NUMBER);
+	//		server.BeginReg();
+	//		new Thread(server).start();
+	//		text.setText("I love cock!");
+	//		try {
+	//			Thread.sleep(20 * 1000);
+	//		} catch (InterruptedException i) {
+	//			i.printStackTrace();
+	//		}
+	//		text.setText("Stopping Server");
+	//		server.stop();
+	//	}
 
 	public void windowClosing(WindowEvent e) {
 		dispose();
@@ -90,7 +99,7 @@ public class ServRun extends Frame implements WindowListener, ActionListener {
 
 	@Override
 	public void actionPerformed(ActionEvent arg0) {
-		
+
 	}
 
 }

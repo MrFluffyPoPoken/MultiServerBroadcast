@@ -27,30 +27,35 @@ public class RegistrationListenerWorkerRunnable implements Runnable {
 		try {
 			InetAddress ipAddress = clientSocket.getInetAddress();
 			String remoteIP = ipAddress.getHostAddress();
-			System.out.println(remoteIP);
 			player.setIPAddress(remoteIP);
+			
 			if (!(player.getIPAddress().equals(null))) {
-				System.out.print("Player IP is: " + player.getIPAddress());
+				System.out.println("Player IP is: " + player.getIPAddress());
 			}
+			
 			OutputStream registerStartOutput = clientSocket.getOutputStream();
+			
 			new PrintWriter(registerStartOutput).println(ProtocolConstants.REGISTER_START);
-			registerStartOutput.close();
-
 			BufferedReader registrationStringReader = new BufferedReader(new InputStreamReader(
 					clientSocket.getInputStream()));
+			System.out.println(registrationStringReader.readLine());
 			String input = registrationStringReader.readLine();
+			
 			while (input == null) {
 				input = registrationStringReader.readLine();
 			}
+			
 			InputStream stream = new ByteArrayInputStream(input.getBytes(StandardCharsets.UTF_8));
 			player.setTeamName(receiveTeamInfo(stream).getTeamName().toString());
 			player.setTeamColor(receiveTeamInfo(stream).getColorHex().toString());
+			
 			if (!(player.getTeamName().equals("") && player.getTeamColor().equals(""))) {
 				System.out.print("Player team name is: " + player.getTeamName());
 				System.out.print("Player color is: " + player.getTeamColor());
 			}
-			registrationStringReader.close();
-			stream.close();
+			
+			// registrationStringReader.close();
+			// stream.close();
 
 			OutputStream registerEndOutput = clientSocket.getOutputStream();
 			new PrintWriter(registerEndOutput).println(ProtocolConstants.REGISTER_END);
@@ -58,6 +63,7 @@ public class RegistrationListenerWorkerRunnable implements Runnable {
 
 			System.out.println("Ended Registration. Closing Socket.");
 			clientSocket.close();
+			
 			if (clientSocket.isClosed()) {
 				System.out.println("Socket closed");
 			}

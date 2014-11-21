@@ -11,7 +11,7 @@ public class RegistrationListenerMultiThreadedServer implements Runnable {
 	protected Thread runningThread = null;
 
 	public RegistrationListenerMultiThreadedServer(int port) {
-		this.serverPort = port;
+		serverPort = port;
 	}
 
 	public void run() {
@@ -53,7 +53,7 @@ public class RegistrationListenerMultiThreadedServer implements Runnable {
 
 	private void openServerSocket() {
 		try {
-			this.serverSocket = new ServerSocket(this.serverPort);
+			serverSocket = new ServerSocket(serverPort);
 			System.out.println("Opened a new socket");
 		} catch (IOException e) {
 			throw new RuntimeException("Cannot open port " + serverPort, e);

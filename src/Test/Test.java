@@ -9,19 +9,24 @@ import java.net.UnknownHostException;
 
 import src.*;
 
-public class Test {
-
-	public static void main(String[] args) {
-		Socket socket;
+public class Test implements Runnable {
+	Socket socket;
+	OutputStream out;
+	
+	public void run() {
 		try {
-			socket = new Socket("209.140.209.166", 60000);
+			socket = new Socket("209.140.209.153", 60000);
 			String ip = InetAddress.getLocalHost().getHostAddress();
-			OutputStream out = socket.getOutputStream();
+			out = socket.getOutputStream();
 			new PrintWriter(out).print(ip);
-		} catch (Exception e) {
+		} 
+		catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 	}
 
+	public void sendColorAndTeamName() {
+		new PrintWriter(out).print("Color and Name");
+	}
 }
